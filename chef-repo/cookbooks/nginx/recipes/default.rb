@@ -1,5 +1,9 @@
-package "nginx" do
-	action :install
+package "nginx-common" do
+        action :install
+end
+
+package "nginx-full" do
+       actio :install
 end
 
 template "/usr/share/nginx/www/index.html" do
