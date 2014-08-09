@@ -1,0 +1,31 @@
+Generated at 2014-08-09 19:41:24 -0400
+Chef::Exceptions::FileNotFound: template[/usr/share/nginx/www/index.html] (nginx::default line 13) had an error: Chef::Exceptions::FileNotFound: Cookbook 'nginx' (0.0.0) does not contain a file at any of these locations:
+  templates/debian-7.6/../template/index.html.erb
+  templates/debian/../template/index.html.erb
+  templates/default/../template/index.html.erb
+
+This cookbook _does_ contain: ['/root/vagrant/chef/chef-repo/cookbooks/nginx/templates/index.html.erb']
+/usr/lib/ruby/vendor_ruby/chef/cookbook_version.rb:647:in `preferred_manifest_record'
+/usr/lib/ruby/vendor_ruby/chef/cookbook_version.rb:655:in `preferred_filename_on_disk_location'
+/usr/lib/ruby/vendor_ruby/chef/provider/template.rb:68:in `template_location'
+/usr/lib/ruby/vendor_ruby/chef/provider/template.rb:39:in `action_create'
+/usr/lib/ruby/vendor_ruby/chef/resource.rb:472:in `run_action'
+/usr/lib/ruby/vendor_ruby/chef/runner.rb:49:in `run_action'
+/usr/lib/ruby/vendor_ruby/chef/runner.rb:85:in `block (2 levels) in converge'
+/usr/lib/ruby/vendor_ruby/chef/runner.rb:85:in `each'
+/usr/lib/ruby/vendor_ruby/chef/runner.rb:85:in `block in converge'
+/usr/lib/ruby/vendor_ruby/chef/resource_collection.rb:94:in `block in execute_each_resource'
+/usr/lib/ruby/vendor_ruby/chef/resource_collection/stepable_iterator.rb:116:in `call'
+/usr/lib/ruby/vendor_ruby/chef/resource_collection/stepable_iterator.rb:116:in `call_iterator_block'
+/usr/lib/ruby/vendor_ruby/chef/resource_collection/stepable_iterator.rb:85:in `step'
+/usr/lib/ruby/vendor_ruby/chef/resource_collection/stepable_iterator.rb:104:in `iterate'
+/usr/lib/ruby/vendor_ruby/chef/resource_collection/stepable_iterator.rb:55:in `each_with_index'
+/usr/lib/ruby/vendor_ruby/chef/resource_collection.rb:92:in `execute_each_resource'
+/usr/lib/ruby/vendor_ruby/chef/runner.rb:80:in `converge'
+/usr/lib/ruby/vendor_ruby/chef/client.rb:330:in `converge'
+/usr/lib/ruby/vendor_ruby/chef/client.rb:163:in `run'
+/usr/lib/ruby/vendor_ruby/chef/application/solo.rb:207:in `block in run_application'
+/usr/lib/ruby/vendor_ruby/chef/application/solo.rb:195:in `loop'
+/usr/lib/ruby/vendor_ruby/chef/application/solo.rb:195:in `run_application'
+/usr/lib/ruby/vendor_ruby/chef/application.rb:70:in `run'
+/usr/bin/chef-solo:24:in `<main>'
