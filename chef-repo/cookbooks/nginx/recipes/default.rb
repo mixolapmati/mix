@@ -11,7 +11,7 @@ end
 #end
 
 template "/usr/share/nginx/www/index.html" do
-	source "../template/index.html.erb"
+	source "index.html.erb"
 	mode "0644"
 end
 

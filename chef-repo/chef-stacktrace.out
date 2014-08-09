@@ -1,10 +1,10 @@
-Generated at 2014-08-09 19:41:24 -0400
+Generated at 2014-08-09 19:52:17 -0400
 Chef::Exceptions::FileNotFound: template[/usr/share/nginx/www/index.html] (nginx::default line 13) had an error: Chef::Exceptions::FileNotFound: Cookbook 'nginx' (0.0.0) does not contain a file at any of these locations:
   templates/debian-7.6/../template/index.html.erb
   templates/debian/../template/index.html.erb
   templates/default/../template/index.html.erb
 
-This cookbook _does_ contain: ['/root/vagrant/chef/chef-repo/cookbooks/nginx/templates/index.html.erb']
+This cookbook _does_ contain: ['/root/vagrant/chef/chef-repo/cookbooks/nginx/templates/default/index.html.erb']
 /usr/lib/ruby/vendor_ruby/chef/cookbook_version.rb:647:in `preferred_manifest_record'
 /usr/lib/ruby/vendor_ruby/chef/cookbook_version.rb:655:in `preferred_filename_on_disk_location'
 /usr/lib/ruby/vendor_ruby/chef/provider/template.rb:68:in `template_location'
