@@ -1,3 +1,7 @@
+package "nginx" do
+	action :install
+end
+
 package "nginx-common" do
         action :install
 end
@@ -12,5 +16,5 @@ template "/usr/share/nginx/www/index.html" do
 end
 
 service "nginx" do
-	action [ :enable, :start]
+	action [ :enable, :start ]
 end
