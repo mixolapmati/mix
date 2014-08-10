@@ -3,7 +3,7 @@ package "mysql-server" do
 end
 
 package "mysql-client" do
-	action: install
+	action :install
 end
 
 service "mysql" do
