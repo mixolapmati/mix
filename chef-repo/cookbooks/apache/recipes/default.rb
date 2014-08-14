@@ -7,6 +7,8 @@ template "/var/www/index.html" do
 	mode "0644"
 end
 
+node.default["apache"]["listen_ports"] = ["8080"]
+
 service "apache2" do
 	action [ :enable, :start ]
 end
