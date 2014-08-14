@@ -7,8 +7,7 @@ template "/var/www/index.html" do
 	mode "0644"
 end
 
-node.default["apache2"]["dir"] = "/etc/apache2"
-node.default["apache2"]["listen_ports"] = ["8080"]
+include_attribute "apache::apache2"
 
 service "apache2" do
 	action [ :enable, :start ]
