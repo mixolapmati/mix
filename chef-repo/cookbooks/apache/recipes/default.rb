@@ -7,7 +7,7 @@ template "/var/www/index.html" do
 	mode "0644"
 end
 
-include_attribute "apache::apache2"
+include_attribute "apache2"
 
 service "apache2" do
 	action [ :enable, :start ]
