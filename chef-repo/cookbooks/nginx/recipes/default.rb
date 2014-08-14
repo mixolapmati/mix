@@ -7,7 +7,7 @@ template "/usr/share/nginx/www/index.html" do
 	mode "0644"
 end
 
-default["nginx"]["listen"] = ["8080"]
+node.default["nginx"]["listen"] = ["8080"]
 
 service "nginx" do
 	action [ :enable, :start ]

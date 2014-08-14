@@ -1,9 +1,6 @@
-Generated at 2014-08-14 00:38:48 -0400
-NameError: Cannot find a resource for override_attributes on debian version 7.6
-/usr/lib/ruby/vendor_ruby/chef/resource_platform_map.rb:126:in `get'
-/usr/lib/ruby/vendor_ruby/chef/resource.rb:685:in `resource_for_platform'
-/usr/lib/ruby/vendor_ruby/chef/resource.rb:702:in `resource_for_node'
-/usr/lib/ruby/vendor_ruby/chef/mixin/recipe_definition_dsl_core.rb:58:in `method_missing'
+Generated at 2014-08-14 00:44:29 -0400
+ArgumentError: You must supply a name when declaring a default resource
+/usr/lib/ruby/vendor_ruby/chef/mixin/recipe_definition_dsl_core.rb:61:in `method_missing'
 /root/vagrant/chef/chef-repo/cookbooks/nginx/recipes/default.rb:10:in `from_file'
 /usr/lib/ruby/vendor_ruby/chef/mixin/from_file.rb:30:in `instance_eval'
 /usr/lib/ruby/vendor_ruby/chef/mixin/from_file.rb:30:in `from_file'
