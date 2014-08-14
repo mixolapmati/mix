@@ -1,19 +1,8 @@
-Generated at 2014-08-09 20:19:18 -0400
-SyntaxError: /root/vagrant/chef/chef-repo/cookbooks/mysql/recipes/default.rb:6: syntax error, unexpected ':', expecting keyword_end
-	action: install
-	       ^
-/usr/lib/ruby/vendor_ruby/chef/mixin/from_file.rb:30:in `instance_eval'
-/usr/lib/ruby/vendor_ruby/chef/mixin/from_file.rb:30:in `from_file'
-/usr/lib/ruby/vendor_ruby/chef/cookbook_version.rb:578:in `load_recipe'
-/usr/lib/ruby/vendor_ruby/chef/mixin/language_include_recipe.rb:46:in `load_recipe'
-/usr/lib/ruby/vendor_ruby/chef/mixin/language_include_recipe.rb:33:in `block in include_recipe'
-/usr/lib/ruby/vendor_ruby/chef/mixin/language_include_recipe.rb:27:in `each'
-/usr/lib/ruby/vendor_ruby/chef/mixin/language_include_recipe.rb:27:in `include_recipe'
-/usr/lib/ruby/vendor_ruby/chef/run_context.rb:72:in `block in load'
-/usr/lib/ruby/vendor_ruby/chef/run_context.rb:69:in `each'
-/usr/lib/ruby/vendor_ruby/chef/run_context.rb:69:in `load'
-/usr/lib/ruby/vendor_ruby/chef/client.rb:199:in `setup_run_context'
-/usr/lib/ruby/vendor_ruby/chef/client.rb:162:in `run'
+Generated at 2014-08-14 00:12:45 -0400
+Chef::Exceptions::MissingRole: Chef::Exceptions::MissingRole
+/usr/lib/ruby/vendor_ruby/chef/node.rb:438:in `expand!'
+/usr/lib/ruby/vendor_ruby/chef/client.rb:267:in `build_node'
+/usr/lib/ruby/vendor_ruby/chef/client.rb:154:in `run'
 /usr/lib/ruby/vendor_ruby/chef/application/solo.rb:207:in `block in run_application'
 /usr/lib/ruby/vendor_ruby/chef/application/solo.rb:195:in `loop'
 /usr/lib/ruby/vendor_ruby/chef/application/solo.rb:195:in `run_application'
