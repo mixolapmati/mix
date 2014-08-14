@@ -1,4 +1,4 @@
-Generated at 2014-08-14 00:38:29 -0400
+Generated at 2014-08-14 00:38:48 -0400
 NameError: Cannot find a resource for override_attributes on debian version 7.6
 /usr/lib/ruby/vendor_ruby/chef/resource_platform_map.rb:126:in `get'
 /usr/lib/ruby/vendor_ruby/chef/resource.rb:685:in `resource_for_platform'
