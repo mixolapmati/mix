@@ -1,0 +1,6 @@
+template "/etc/apache2/ports.conf" do
+	source "ports.conf.erb"
+	variables({
+		<% listen_ports%> Listen = 8080
+	})
+end

@@ -1,2 +1,2 @@
 default[:apache][:dir] = "/etc/apache2"
-default[:apache][:listen_ports] = ["8080"]
+default[:apache][:listen_port] = ["8080"]
