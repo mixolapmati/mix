@@ -1,1 +1,1 @@
-default["apache2"]["listen_ports"] = ["8080"]
+default["apache"]["listen_ports"] = ["8080"]
