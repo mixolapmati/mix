@@ -8,5 +8,5 @@ template "/var/www/index.html" do
 end
 
 service "apache2" do
-	action [ :enable, :start ]
+	action [ :enable, :start, :restart ]
 end
