@@ -9,7 +9,9 @@ end
 
 template "/etc/apache2/ports.conf" do
         source "ports.conf.erb"
-        attribute "8080"
+        variables ({ 
+		:listen_port => "8080"
+	})
 	action :create
 end
 
