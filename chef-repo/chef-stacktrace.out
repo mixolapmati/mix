@@ -1,22 +1,61 @@
-Generated at 2014-08-18 17:46:30 -0400
-NoMethodError: undefined method `attribute' for Chef::Resource::Template
-/usr/lib/ruby/vendor_ruby/chef/resource.rb:166:in `method_missing'
-/root/vagrant/chef/chef-repo/cookbooks/apache/recipes/default.rb:12:in `block in from_file'
-/usr/lib/ruby/vendor_ruby/chef/mixin/recipe_definition_dsl_core.rb:74:in `instance_eval'
-/usr/lib/ruby/vendor_ruby/chef/mixin/recipe_definition_dsl_core.rb:74:in `method_missing'
-/root/vagrant/chef/chef-repo/cookbooks/apache/recipes/default.rb:10:in `from_file'
-/usr/lib/ruby/vendor_ruby/chef/mixin/from_file.rb:30:in `instance_eval'
-/usr/lib/ruby/vendor_ruby/chef/mixin/from_file.rb:30:in `from_file'
-/usr/lib/ruby/vendor_ruby/chef/cookbook_version.rb:578:in `load_recipe'
-/usr/lib/ruby/vendor_ruby/chef/mixin/language_include_recipe.rb:46:in `load_recipe'
-/usr/lib/ruby/vendor_ruby/chef/mixin/language_include_recipe.rb:33:in `block in include_recipe'
-/usr/lib/ruby/vendor_ruby/chef/mixin/language_include_recipe.rb:27:in `each'
-/usr/lib/ruby/vendor_ruby/chef/mixin/language_include_recipe.rb:27:in `include_recipe'
-/usr/lib/ruby/vendor_ruby/chef/run_context.rb:72:in `block in load'
-/usr/lib/ruby/vendor_ruby/chef/run_context.rb:69:in `each'
-/usr/lib/ruby/vendor_ruby/chef/run_context.rb:69:in `load'
-/usr/lib/ruby/vendor_ruby/chef/client.rb:199:in `setup_run_context'
-/usr/lib/ruby/vendor_ruby/chef/client.rb:162:in `run'
+Generated at 2014-08-18 18:17:32 -0400
+Chef::Mixin::Template::TemplateError: 
+
+Chef::Mixin::Template::TemplateError (undefined local variable or method `listen_port' for #<Erubis::Context:0x000000036f92f0>) on line #8:
+
+  6: # README.Debian.gz
+  7: 
+  8: NameVirtualHost *:<%= listen_port%>
+  9: Listen <%= listen_port%>
+ 10: 
+
+  (erubis):8:in `block in evaluate'
+  /usr/lib/ruby/vendor_ruby/erubis/evaluator.rb:74:in `instance_eval'
+  /usr/lib/ruby/vendor_ruby/erubis/evaluator.rb:74:in `evaluate'
+  /usr/lib/ruby/vendor_ruby/chef/mixin/template.rb:41:in `render_template'
+  /usr/lib/ruby/vendor_ruby/chef/provider/template.rb:99:in `render_with_context'
+  /usr/lib/ruby/vendor_ruby/chef/provider/template.rb:39:in `action_create'
+  /usr/lib/ruby/vendor_ruby/chef/resource.rb:472:in `run_action'
+  /usr/lib/ruby/vendor_ruby/chef/runner.rb:49:in `run_action'
+  /usr/lib/ruby/vendor_ruby/chef/runner.rb:85:in `block (2 levels) in converge'
+  /usr/lib/ruby/vendor_ruby/chef/runner.rb:85:in `each'
+  /usr/lib/ruby/vendor_ruby/chef/runner.rb:85:in `block in converge'
+  /usr/lib/ruby/vendor_ruby/chef/resource_collection.rb:94:in `block in execute_each_resource'
+  /usr/lib/ruby/vendor_ruby/chef/resource_collection/stepable_iterator.rb:116:in `call'
+  /usr/lib/ruby/vendor_ruby/chef/resource_collection/stepable_iterator.rb:116:in `call_iterator_block'
+  /usr/lib/ruby/vendor_ruby/chef/resource_collection/stepable_iterator.rb:85:in `step'
+  /usr/lib/ruby/vendor_ruby/chef/resource_collection/stepable_iterator.rb:104:in `iterate'
+  /usr/lib/ruby/vendor_ruby/chef/resource_collection/stepable_iterator.rb:55:in `each_with_index'
+  /usr/lib/ruby/vendor_ruby/chef/resource_collection.rb:92:in `execute_each_resource'
+  /usr/lib/ruby/vendor_ruby/chef/runner.rb:80:in `converge'
+  /usr/lib/ruby/vendor_ruby/chef/client.rb:330:in `converge'
+  /usr/lib/ruby/vendor_ruby/chef/client.rb:163:in `run'
+  /usr/lib/ruby/vendor_ruby/chef/application/solo.rb:207:in `block in run_application'
+  /usr/lib/ruby/vendor_ruby/chef/application/solo.rb:195:in `loop'
+  /usr/lib/ruby/vendor_ruby/chef/application/solo.rb:195:in `run_application'
+  /usr/lib/ruby/vendor_ruby/chef/application.rb:70:in `run'
+  /usr/bin/chef-solo:24:in `<main>'
+
+
+/usr/lib/ruby/vendor_ruby/chef/mixin/template.rb:43:in `rescue in render_template'
+/usr/lib/ruby/vendor_ruby/chef/mixin/template.rb:39:in `render_template'
+/usr/lib/ruby/vendor_ruby/chef/provider/template.rb:99:in `render_with_context'
+/usr/lib/ruby/vendor_ruby/chef/provider/template.rb:39:in `action_create'
+/usr/lib/ruby/vendor_ruby/chef/resource.rb:472:in `run_action'
+/usr/lib/ruby/vendor_ruby/chef/runner.rb:49:in `run_action'
+/usr/lib/ruby/vendor_ruby/chef/runner.rb:85:in `block (2 levels) in converge'
+/usr/lib/ruby/vendor_ruby/chef/runner.rb:85:in `each'
+/usr/lib/ruby/vendor_ruby/chef/runner.rb:85:in `block in converge'
+/usr/lib/ruby/vendor_ruby/chef/resource_collection.rb:94:in `block in execute_each_resource'
+/usr/lib/ruby/vendor_ruby/chef/resource_collection/stepable_iterator.rb:116:in `call'
+/usr/lib/ruby/vendor_ruby/chef/resource_collection/stepable_iterator.rb:116:in `call_iterator_block'
+/usr/lib/ruby/vendor_ruby/chef/resource_collection/stepable_iterator.rb:85:in `step'
+/usr/lib/ruby/vendor_ruby/chef/resource_collection/stepable_iterator.rb:104:in `iterate'
+/usr/lib/ruby/vendor_ruby/chef/resource_collection/stepable_iterator.rb:55:in `each_with_index'
+/usr/lib/ruby/vendor_ruby/chef/resource_collection.rb:92:in `execute_each_resource'
+/usr/lib/ruby/vendor_ruby/chef/runner.rb:80:in `converge'
+/usr/lib/ruby/vendor_ruby/chef/client.rb:330:in `converge'
+/usr/lib/ruby/vendor_ruby/chef/client.rb:163:in `run'
 /usr/lib/ruby/vendor_ruby/chef/application/solo.rb:207:in `block in run_application'
 /usr/lib/ruby/vendor_ruby/chef/application/solo.rb:195:in `loop'
 /usr/lib/ruby/vendor_ruby/chef/application/solo.rb:195:in `run_application'
