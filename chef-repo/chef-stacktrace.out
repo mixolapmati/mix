@@ -1,4 +1,4 @@
-Generated at 2014-08-18 17:33:50 -0400
+Generated at 2014-08-18 17:34:23 -0400
 NoMethodError: undefined method `listen_port' for Chef::Resource::Template
 /usr/lib/ruby/vendor_ruby/chef/resource.rb:166:in `method_missing'
 /root/vagrant/chef/chef-repo/cookbooks/apache/recipes/default.rb:13:in `block in from_file'
