@@ -1,4 +1,4 @@
-Generated at 2014-08-22 06:54:16 -0400
+Generated at 2014-08-22 06:55:25 -0400
 ArgumentError: Attribute listen_port is not defined!
 /usr/lib/ruby/vendor_ruby/chef/node/attribute.rb:428:in `method_missing'
 /usr/lib/ruby/vendor_ruby/chef/node.rb:346:in `method_missing'
