@@ -10,7 +10,7 @@ end
 template "/etc/apache2/ports.conf" do
         source "ports.conf.erb"
         variables ({ 
-		:listen_port => "8090"
+		listen_port => "8090"
 	})
 	action :create
 end
