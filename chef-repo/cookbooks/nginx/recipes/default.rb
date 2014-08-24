@@ -8,7 +8,7 @@ template "/usr/share/nginx/www/index.html" do
 end
 
 template "/etc/nginx/sites-available/default" do
-	source "/etc/nginx/sites-available/default.erb"
+	source "etc/nginx/sites-available/default.erb"
 	variables({
 		:listen_port => "8090"
 	})
