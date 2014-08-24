@@ -1,4 +1,4 @@
-Generated at 2014-08-24 14:27:51 -0400
+Generated at 2014-08-24 14:28:57 -0400
 Mixlib::ShellOut::ShellCommandFailed: service[apache2] (apache::default line 18) had an error: Mixlib::ShellOut::ShellCommandFailed: Expected process to exit with [0], but received '1'
 ---- Begin output of /etc/init.d/apache2 start ----
 STDOUT: Starting web server: apache2Action 'start' failed.
@@ -14,8 +14,7 @@ Ran /etc/init.d/apache2 start returned 1
 /usr/lib/ruby/vendor_ruby/mixlib/shellout.rb:228:in `error!'
 /usr/lib/ruby/vendor_ruby/chef/mixin/shell_out.rb:36:in `shell_out!'
 /usr/lib/ruby/vendor_ruby/chef/provider/service/init.rb:40:in `start_service'
-/usr/lib/ruby/vendor_ruby/chef/provider/service/init.rb:60:in `restart_service'
-/usr/lib/ruby/vendor_ruby/chef/provider/service.rb:78:in `action_restart'
+/usr/lib/ruby/vendor_ruby/chef/provider/service.rb:57:in `action_start'
 /usr/lib/ruby/vendor_ruby/chef/resource.rb:472:in `run_action'
 /usr/lib/ruby/vendor_ruby/chef/runner.rb:49:in `run_action'
 /usr/lib/ruby/vendor_ruby/chef/runner.rb:85:in `block (2 levels) in converge'
