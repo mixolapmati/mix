@@ -1,19 +1,36 @@
-Generated at 2014-08-22 06:55:25 -0400
-ArgumentError: Attribute listen_port is not defined!
-/usr/lib/ruby/vendor_ruby/chef/node/attribute.rb:428:in `method_missing'
-/usr/lib/ruby/vendor_ruby/chef/node.rb:346:in `method_missing'
-/root/vagrant/chef/chef-repo/cookbooks/apache/attributes/default.rb:2:in `from_file'
-/usr/lib/ruby/vendor_ruby/chef/mixin/from_file.rb:30:in `instance_eval'
-/usr/lib/ruby/vendor_ruby/chef/mixin/from_file.rb:30:in `from_file'
-/usr/lib/ruby/vendor_ruby/chef/node.rb:656:in `block (2 levels) in load_attributes'
-/usr/lib/ruby/vendor_ruby/chef/node.rb:654:in `each'
-/usr/lib/ruby/vendor_ruby/chef/node.rb:654:in `block in load_attributes'
-/usr/lib/ruby/vendor_ruby/chef/node.rb:653:in `each'
-/usr/lib/ruby/vendor_ruby/chef/node.rb:653:in `load_attributes'
-/usr/lib/ruby/vendor_ruby/chef/run_context.rb:101:in `load_attributes'
-/usr/lib/ruby/vendor_ruby/chef/run_context.rb:60:in `load'
-/usr/lib/ruby/vendor_ruby/chef/client.rb:199:in `setup_run_context'
-/usr/lib/ruby/vendor_ruby/chef/client.rb:162:in `run'
+Generated at 2014-08-24 14:27:51 -0400
+Mixlib::ShellOut::ShellCommandFailed: service[apache2] (apache::default line 18) had an error: Mixlib::ShellOut::ShellCommandFailed: Expected process to exit with [0], but received '1'
+---- Begin output of /etc/init.d/apache2 start ----
+STDOUT: Starting web server: apache2Action 'start' failed.
+The Apache error log may have more information.
+ failed!
+STDERR: (98)Address already in use: make_sock: could not bind to address [::]:80
+(98)Address already in use: make_sock: could not bind to address 0.0.0.0:80
+no listening sockets available, shutting down
+Unable to open logs
+---- End output of /etc/init.d/apache2 start ----
+Ran /etc/init.d/apache2 start returned 1
+/usr/lib/ruby/vendor_ruby/mixlib/shellout.rb:242:in `invalid!'
+/usr/lib/ruby/vendor_ruby/mixlib/shellout.rb:228:in `error!'
+/usr/lib/ruby/vendor_ruby/chef/mixin/shell_out.rb:36:in `shell_out!'
+/usr/lib/ruby/vendor_ruby/chef/provider/service/init.rb:40:in `start_service'
+/usr/lib/ruby/vendor_ruby/chef/provider/service/init.rb:60:in `restart_service'
+/usr/lib/ruby/vendor_ruby/chef/provider/service.rb:78:in `action_restart'
+/usr/lib/ruby/vendor_ruby/chef/resource.rb:472:in `run_action'
+/usr/lib/ruby/vendor_ruby/chef/runner.rb:49:in `run_action'
+/usr/lib/ruby/vendor_ruby/chef/runner.rb:85:in `block (2 levels) in converge'
+/usr/lib/ruby/vendor_ruby/chef/runner.rb:85:in `each'
+/usr/lib/ruby/vendor_ruby/chef/runner.rb:85:in `block in converge'
+/usr/lib/ruby/vendor_ruby/chef/resource_collection.rb:94:in `block in execute_each_resource'
+/usr/lib/ruby/vendor_ruby/chef/resource_collection/stepable_iterator.rb:116:in `call'
+/usr/lib/ruby/vendor_ruby/chef/resource_collection/stepable_iterator.rb:116:in `call_iterator_block'
+/usr/lib/ruby/vendor_ruby/chef/resource_collection/stepable_iterator.rb:85:in `step'
+/usr/lib/ruby/vendor_ruby/chef/resource_collection/stepable_iterator.rb:104:in `iterate'
+/usr/lib/ruby/vendor_ruby/chef/resource_collection/stepable_iterator.rb:55:in `each_with_index'
+/usr/lib/ruby/vendor_ruby/chef/resource_collection.rb:92:in `execute_each_resource'
+/usr/lib/ruby/vendor_ruby/chef/runner.rb:80:in `converge'
+/usr/lib/ruby/vendor_ruby/chef/client.rb:330:in `converge'
+/usr/lib/ruby/vendor_ruby/chef/client.rb:163:in `run'
 /usr/lib/ruby/vendor_ruby/chef/application/solo.rb:207:in `block in run_application'
 /usr/lib/ruby/vendor_ruby/chef/application/solo.rb:195:in `loop'
 /usr/lib/ruby/vendor_ruby/chef/application/solo.rb:195:in `run_application'
