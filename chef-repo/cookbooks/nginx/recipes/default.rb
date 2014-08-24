@@ -10,7 +10,7 @@ end
 template "/etc/nginx/sites-available/default" do
 	source "/etc/nginx/sites-available/default.erb"
 	variables({
-		:listen_ports => "8090"
+		:listen_port => "8090"
 	})
 	action :create
 end
