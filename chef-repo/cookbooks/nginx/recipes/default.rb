@@ -7,6 +7,14 @@ template "/usr/share/nginx/www/index.html" do
 	mode "0644"
 end
 
+template "/etc/nginx/sites-available/default" do
+	source "/etc/nginx/sites-available/default.erb"
+	variables({
+		:listen_ports => "8090"
+	})
+	action :create
+end
+
 service "nginx" do
 	action [ :enable, :start ]
 end
