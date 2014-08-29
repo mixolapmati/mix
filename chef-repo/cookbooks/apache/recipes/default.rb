@@ -15,6 +15,11 @@ template "/etc/apache2/ports.conf" do
 	action :create
 end
 
+file "/root/hello.txt" do
+	action :create
+	content 'Hello!!'
+end
+
 service "apache2" do
 	action [ :enable, :start, :restart ]
 end
